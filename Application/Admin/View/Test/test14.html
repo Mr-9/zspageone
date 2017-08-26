@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <volist name='array' id='vol'>
+        {$vol}-
+    </volist>
+<hr>
+    <foreach name='array' item='for'>
+        {$for}-
+    </foreach>
+<hr>
+    <volist name='array2' id="vol">
+        <volist name='vol' id="vo">
+            {$vo}-
+        </volist>
+        <br>
+    </volist>
+<hr>
+
+    <foreach name='array2' item='for'>
+        {$for[0]}--{$for[1]}--{$for[2]}--{$for[3]}
+        <br>
+    </foreach>
+    <hr>
+    {$array2[0][0]}
+    <!-- 注意数组遍历和直接输出的区别 -->
+</body>
+</html>
